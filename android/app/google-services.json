@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994236233482",
+    "project_id": "lmsapp-c283c",
+    "storage_bucket": "lmsapp-c283c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994236233482:android:08523e5f1a3bf33404ecf3",
+        "android_client_info": {
+          "package_name": "com.example.lms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkUTm0-NaOp_TvBuo2VTVB_pTadOe1HUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
