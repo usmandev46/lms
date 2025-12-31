@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import '../../../../gen/assets.gen.dart';
 import '../../../core/custom_widgets/my_text.dart';
 import '../../../core/custom_widgets/my_text_field.dart';
 import '../../../core/custom_widgets/my_elevated_button.dart';
@@ -26,7 +27,7 @@ class LoginView extends StatelessWidget {
                 SizedBox(height: 4.h),
                 Center(
                   child: Image.asset(
-                    "assets/logo/splash_logo.png",
+                    Assets.logo.splashLogo.path,
                     height: 17.h,
                   ),
                 ),
@@ -146,9 +147,9 @@ class LoginView extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    _socialButton(context, "assets/logo/google.png"),
+                    _socialButton(context, Assets.logo.google.path),
                     4.width,
-                    _socialButton(context, "assets/logo/facebook.png"),
+                    _socialButton(context, Assets.logo.facebook.path),
                   ],
                 ),
                 Spacer(),

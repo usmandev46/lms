@@ -4,6 +4,7 @@ import 'package:lms/app/core/extensions/size_extensions.dart';
 import 'package:lms/app/modules/home/widgets/custom_home_appBar.dart';
 import 'package:lms/app/modules/home/widgets/profile_banner.dart';
 import 'package:sizer/sizer.dart';
+import '../../../../../gen/assets.gen.dart';
 import '../../../../core/custom_widgets/my_text.dart';
 import '../../../../core/theme/theme_controller.dart';
 import '../controller/home_controller.dart';
@@ -33,7 +34,7 @@ class AdminHomeView extends StatelessWidget {
         return CustomAdminAppDrawer(
           name: data == null ? "" : data.data.currentUser.name,
           email: data == null ? "" : data.data.currentUser.email,
-          imagePath: 'assets/logo/profile.png',
+          imagePath: Assets.logo.profile.path,
         );
       }),
       body: SafeArea(

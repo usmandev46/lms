@@ -2,20 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lms/app/core/constants/app_colors.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
-import 'package:lms/app/modules/attendance_reports/view/attendance_reports_view.dart';
-import 'package:lms/app/modules/quiz_reports/view/quiz_reports_view.dart';
-import 'package:lms/app/modules/student_tracking/view/student_tracking_view.dart';
-import 'package:lms/app/modules/students_reports_view/view/students_reports_view.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../core/custom_widgets/custom_dialog_logout.dart';
 import '../../../../core/custom_widgets/my_text.dart';
 import '../../../../routes/app_routes.dart';
-import '../../../class_reports/view/class_reports_view.dart';
-import '../../../course_enrollments/view/course_enrollment_view.dart';
-import '../../../course_reports/view/course_reports_view.dart';
-import '../../../entry_test_enrollments/view/entry_test_enrollments_view.dart';
-import '../../../exam_reports/view/exam_reports_view.dart';
 
 class CustomAdminAppDrawer extends StatelessWidget {
   final String name;

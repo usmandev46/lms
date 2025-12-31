@@ -22,7 +22,6 @@ class NetworkHelper {
 
     _connectivityStream = _connectivity.onConnectivityChanged;
 
-    // initial check (important)
     _hasInternet = await _checkInternet();
     if (!_hasInternet) {
       _showToast(

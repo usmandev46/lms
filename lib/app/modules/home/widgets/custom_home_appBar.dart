@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lms/app/core/custom_widgets/my_text.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../../gen/assets.gen.dart';
+
 PreferredSizeWidget customHomeAppBar(
   BuildContext context, {
   Widget? suffixIcon,
@@ -49,7 +51,7 @@ PreferredSizeWidget customHomeAppBar(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
                     )
-                  : Image.asset("assets/logo/splash_logo.png", height: 7.h),
+                  : Image.asset(Assets.logo.splashLogo.path, height: 7.h),
 
               const Spacer(),
 

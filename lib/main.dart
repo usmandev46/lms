@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
-import 'app/core/helpers/network_helper.dart';
 import 'app/core/helpers/romote_config_baseUrl_sevices.dart';
 import 'app/core/theme/dark_theme.dart';
 import 'app/core/theme/light_theme.dart';
@@ -27,9 +26,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // WidgetsBinding.instance.addPostFrameCallback((_) {
-    //   NetworkHelper.init();
-    // });
     final themeController = Get.find<ThemeController>();
     return Sizer(
       builder: (p1, p2, p3) {
@@ -48,13 +44,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
