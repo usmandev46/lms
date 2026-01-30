@@ -4,6 +4,8 @@ import 'package:lms/app/core/constants/app_colors.dart';
 import '../../../core/constants/api_endpoints.dart';
 import '../../../core/helpers/auth_storage.dart';
 import '../../../core/helpers/bio_matric_auth.dart';
+import '../../../core/theme/theme_controller.dart';
+import '../../../core/theme/theme_service.dart';
 import '../../../data/repositories/api_service.dart';
 import '../../../routes/app_routes.dart';
 import '../../bottom_bar/view/student_bottom_bar.dart';
@@ -23,7 +25,7 @@ class LoginController extends GetxController {
   }
 
   void login() async {
-    if(isLoading.value) return;
+    if (isLoading.value) return;
     isLoading.value = true;
 
     try {
@@ -31,12 +33,18 @@ class LoginController extends GetxController {
         // "email": emailController.text.trim(),
         // "password": passwordController.text.trim(),
         "email": "admin1@gmail.com",
-        "password": "111"
+        "password": "111",
       };
 
       var res = await _api.post(_endpoints.login, data: body);
 
-      if (res != null && res['success'] == true && res['data'] != null && res['data']['token'] != null) {
+      print("----------------- login res $res");
+      print("----------------- login status ${res?['success']}");
+
+      if (res != null &&
+          res['success'] == true &&
+          res['data'] != null &&
+          res['data']['token'] != null) {
         String token = res['data']['token'];
 
         await AuthStorage().saveToken(token);
@@ -48,17 +56,17 @@ class LoginController extends GetxController {
           await AuthStorage().saveBiometricEnabled(false);
         }
 
-        Get.offAllNamed(Routes.studentHome);
+        ThemeService().redirectByRole();
       } else {
-       if(res?['message'] != null){
-         Get.snackbar(
-           "Login Failed",
-           backgroundColor: AppColors.error,
-           colorText: Colors.white,
-           res?['message'] ?? "Invalid email or password",
-           snackPosition: SnackPosition.BOTTOM,
-         );
-       }
+        if (res?['message'] != null) {
+          Get.snackbar(
+            "Login Failed",
+            backgroundColor: AppColors.error,
+            colorText: Colors.white,
+            res?['message'] ?? "Invalid email or password",
+            snackPosition: SnackPosition.BOTTOM,
+          );
+        }
       }
     } catch (e) {
       Get.snackbar(
@@ -77,8 +85,10 @@ class LoginController extends GetxController {
     try {
       var res = await _api.post(_endpoints.regenerateToken);
 
-      if (res != null && res['success'] == true && res['data'] != null && res['data']['token'] != null) {
-
+      if (res != null &&
+          res['success'] == true &&
+          res['data'] != null &&
+          res['data']['token'] != null) {
         String token = res['data']['token'];
         await AuthStorage().saveToken(token);
         return true;
@@ -89,5 +99,4 @@ class LoginController extends GetxController {
       return false;
     }
   }
-
 }

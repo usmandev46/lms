@@ -6,7 +6,7 @@ class RemoteConfigService {
 
   static Future<void> init() async {
     await _remoteConfig.setDefaults(<String, dynamic>{
-      'base_url': 'http://192.168.1.134:8080/api',
+      'base_url': 'http://192.168.1.147:8080/api',
     });
 
     try {

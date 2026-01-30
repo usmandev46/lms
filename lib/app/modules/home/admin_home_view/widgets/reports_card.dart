@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/custom_widgets/my_text.dart';
+import '../../../../core/extensions/size_extensions.dart';
 import '../controller/home_controller.dart';
 
 class ReportsCard extends StatelessWidget {
@@ -36,8 +36,8 @@ class ReportsCard extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        MyText(title, fontSize: 14.sp),
-        MyText(value, fontWeight: FontWeight.bold, color: Colors.green, fontSize: 14.sp,),
+        MyText(title, fontSize: 1.8.sp),
+        MyText(value, fontWeight: FontWeight.bold, color: Colors.green, fontSize: 1.8.sp,),
       ],
     );
   }

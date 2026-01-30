@@ -8,8 +8,8 @@ import '../../home/admin_home_view/controller/home_controller.dart';
 import '../../home/admin_home_view/view/admin_home_view.dart';
 import '../controller/bottom_bar_controller.dart';
 
-class StudentBottomBar extends StatelessWidget {
-  StudentBottomBar({super.key});
+class AdminBottomBar extends StatelessWidget {
+  AdminBottomBar({super.key});
   final BottomNavController controller = Get.find<BottomNavController>();
 
   final List<Widget> _pages = [

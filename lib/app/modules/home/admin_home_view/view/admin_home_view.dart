@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
 import 'package:lms/app/modules/home/widgets/custom_home_appBar.dart';
 import 'package:lms/app/modules/home/widgets/profile_banner.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../../gen/assets.gen.dart';
 import '../../../../core/custom_widgets/my_text.dart';
 import '../../../../core/theme/theme_controller.dart';
@@ -97,6 +96,6 @@ class AdminHomeView extends StatelessWidget {
   }
 
   Widget _sectionTitle(String title) {
-    return MyText(title, fontSize: 15.sp, fontWeight: FontWeight.bold);
+    return MyText(title, fontSize: 2.sp, fontWeight: FontWeight.bold);
   }
 }

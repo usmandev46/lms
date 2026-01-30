@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 
+import '../extensions/size_extensions.dart';
 import 'my_text.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
@@ -230,7 +230,7 @@ class CustomDataTableAdvance extends StatelessWidget {
       child: MyText(
         title,
         fontWeight: FontWeight.bold,
-        fontSize: 14.sp,
+        fontSize: 1.8.sp,
       ),
     );
   }

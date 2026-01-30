@@ -2,12 +2,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
 
 import 'app/core/helpers/romote_config_baseUrl_sevices.dart';
 import 'app/core/theme/dark_theme.dart';
 import 'app/core/theme/light_theme.dart';
 import 'app/core/theme/theme_controller.dart';
+import 'app/modules/home/view/home_view.dart';
 import 'app/routes/app_pages.dart';
 import 'app/routes/app_routes.dart';
 import 'firebase_options.dart';
@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeController = Get.find<ThemeController>();
-    return Sizer(
-      builder: (p1, p2, p3) {
+    return Builder(
+      builder: (BuildContext context) {
         return GetMaterialApp(
           defaultTransition: Transition.fade,
           transitionDuration: Duration(milliseconds: 300),
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           themeMode: themeController.themeMode,
           debugShowCheckedModeBanner: false,
           initialRoute: Routes.splash,
-          getPages: AppPages.pages,
+          getPages: AppPages.pages
         );
       },
     );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../../core/custom_widgets/my_text.dart';
 import '../../students_reports_view/widget/student_filter_dialog.dart';
@@ -42,7 +41,7 @@ void showCourseEnrollmentsReportsFilterDialog(
                       children: [
                         MyText(
                           "Filter Reports",
-                          fontSize: 16.sp,
+                          fontSize: 2.1.sp,
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).colorScheme.primary,
                         ),

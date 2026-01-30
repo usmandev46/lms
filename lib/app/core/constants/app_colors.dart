@@ -34,13 +34,13 @@ class AppColors {
   static const Color grey = Color(0xFF9E9E9E);
   static const Color shadow = Color(0x1A000000);
 
-  // ---------------- ROLE COLORS ----------------
-  // Student colors
-  static const Color studentPrimary = Color(0xFF357A38);
+// Student colors
+  static const Color studentPrimary = Color(0xFF10B981);
 
-  // Teacher colors
-  static const Color teacherPrimary = Color(0xFF1565C0);
+// Teacher colors
+  static const Color teacherPrimary = Color(0xFFF59E0b);
 
-  // Admin colors
-  static const Color adminPrimary = Color(0xFF4A148C);
+// Admin colors
+  static const Color adminPrimary = Color(0xFF136DEC);
+
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../../core/custom_widgets/my_text.dart';
 import '../controller/student_reports_controller.dart';
@@ -50,7 +49,7 @@ void showFilterDialog(
                       children: [
                         MyText(
                           "Filter Reports",
-                          fontSize: 16.sp,
+                          fontSize: 2.1.sp,
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).colorScheme.primary,
                         ),
@@ -347,7 +346,7 @@ class FilterDropdown<T> extends StatelessWidget {
         MyText(label,
             color: Theme.of(context).colorScheme.primary,
             fontWeight: FontWeight.bold,
-            fontSize: 14.sp),
+            fontSize: 1.8.sp),
         Center(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 0.5.h),
@@ -369,11 +368,11 @@ class FilterDropdown<T> extends StatelessWidget {
                   children: [
                     Icon(
                       icon,
-                      size: 18.sp,
+                      size: 2.1.sp,
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     2.width,
-                    MyText(label, fontSize: 14.sp),
+                    MyText(label, fontSize: 1.8.sp),
                   ],
                 ),
                 isExpanded: true,
@@ -388,7 +387,7 @@ class FilterDropdown<T> extends StatelessWidget {
                       value: null,
                       child: Row(
                         children: [
-                          MyText("Select $label", fontSize: 14.sp, color: Colors.black38),
+                          MyText("Select $label", fontSize: 1.8.sp, color: Colors.black38),
                         ],
                       ),
                     );
@@ -399,11 +398,11 @@ class FilterDropdown<T> extends StatelessWidget {
                         children: [
                           Icon(
                             icon,
-                            size: 16.sp,
+                            size: 2.sp,
                             color: Theme.of(context).colorScheme.primary,
                           ),
                           2.width,
-                          MyText(itemLabel(item), fontSize: 14.sp),
+                          MyText(itemLabel(item), fontSize: 1.8.sp),
                         ],
                       ),
                     );
@@ -442,7 +441,7 @@ class DatePickerField extends StatelessWidget {
           label,
           color: Theme.of(context).colorScheme.primary,
           fontWeight: FontWeight.bold,
-          fontSize: 14.sp,
+          fontSize: 1.8.sp,
         ),
         GestureDetector(
           onTap: () async {
@@ -476,7 +475,7 @@ class DatePickerField extends StatelessWidget {
                   children: [
                     Icon(
                       icon,
-                      size: 18.sp,
+                      size: 2.1.sp,
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     2.width,
@@ -484,7 +483,7 @@ class DatePickerField extends StatelessWidget {
                       selectedDate != null
                           ? "${selectedDate!.month}/${selectedDate!.day}/${selectedDate!.year}"
                           : "Select Date",
-                      fontSize: 14.sp,
+                      fontSize: 1.8.sp,
                       color: selectedDate != null ? Colors.black : Colors.grey,
                     ),
                   ],
@@ -492,7 +491,7 @@ class DatePickerField extends StatelessWidget {
                 Icon(
                   Icons.calendar_today,
                   color: Theme.of(context).colorScheme.primary,
-                  size: 18.sp,
+                  size: 2.1.sp,
                 ),
               ],
             ),

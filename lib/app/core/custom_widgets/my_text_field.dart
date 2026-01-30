@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
-import '../constants/app_colors.dart';
+
+import '../extensions/size_extensions.dart';
+
 
 class MyTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -25,7 +26,7 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 7.h,
+      height: 7.2.h,
       child: TextFormField(
         controller: controller,
         obscureText: isPassword,
@@ -33,13 +34,13 @@ class MyTextField extends StatelessWidget {
         validator: validator,
         style: TextStyle(
           color: Theme.of(context).textTheme.bodyMedium?.color,
-          fontSize: 15.sp,
+          fontSize: 1.7.sp,
         ),
         decoration: InputDecoration(
           labelText: labelText,
           labelStyle: TextStyle(
             color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.6),
-            fontSize: 15.sp,
+            fontSize: 1.7.sp,
           ),
           filled: true,
           fillColor: Theme.of(context).brightness == Brightness.dark

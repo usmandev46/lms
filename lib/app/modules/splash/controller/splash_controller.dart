@@ -5,6 +5,7 @@ import 'package:lms/app/modules/bottom_bar/view/student_bottom_bar.dart';
 import '../../../core/helpers/auth_storage.dart';
 import '../../../core/helpers/bio_matric_auth.dart';
 import '../../../core/helpers/network_helper.dart';
+import '../../../core/theme/theme_service.dart';
 import '../../../routes/app_routes.dart';
 import '../../role/view/role_view.dart';
 
@@ -16,7 +17,6 @@ class SplashController extends GetxController {
     super.onReady();
     _startAppFlow();
   }
-
 
   Future<void> _startAppFlow() async {
     NetworkHelper.init();
@@ -38,8 +38,7 @@ class SplashController extends GetxController {
       );
 
       await remoteConfig.fetchAndActivate();
-    } catch (_) {
-    }
+    } catch (_) {}
   }
 
   Future<void> _handleNavigation() async {
@@ -56,28 +55,28 @@ class SplashController extends GetxController {
 
     bool biometricEnabled = await AuthStorage().getBiometricEnabled();
     if (!biometricEnabled) {
-      Get.offAllNamed(Routes.studentHome);
+      ThemeService().redirectByRole();
       return;
     }
 
     bool bioAllowed = await _biometric.isBiometricAvailable();
 
     if (!bioAllowed) {
-      Get.offAllNamed(Routes.studentHome);
+      ThemeService().redirectByRole();
       return;
     }
 
     bool authenticated = await _biometric.authenticate();
 
     if (authenticated) {
-      Get.offAllNamed(Routes.studentHome);
+      ThemeService().redirectByRole();
     } else {
       Get.snackbar(
         "Authentication Failed",
         "Please login again",
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: AppColors.error,
-        colorText: AppColors.textLight
+        colorText: AppColors.textLight,
       );
 
       await AuthStorage().removeToken();

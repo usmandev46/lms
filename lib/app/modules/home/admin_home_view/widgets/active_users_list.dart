@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/custom_widgets/my_text.dart';
+import '../../../../core/extensions/size_extensions.dart';
 import '../../../../core/theme/theme_controller.dart';
 
 class ActiveUsersSection extends StatelessWidget {
@@ -17,7 +17,7 @@ class ActiveUsersSection extends StatelessWidget {
     ];
 
     return SizedBox(
-      height: 10.h,
+      height: 12.h,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         separatorBuilder: (_, __) => SizedBox(width: 3.w),
@@ -34,8 +34,8 @@ class ActiveUsersSection extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MyText(item["value"]!, fontSize: 18.sp, fontWeight: FontWeight.bold),
-                MyText(item["label"]!, textAlign: TextAlign.center, fontSize: 13.sp, fontWeight: FontWeight.w600,),
+                MyText(item["value"]!, fontSize: 2.2.sp, fontWeight: FontWeight.bold),
+                MyText(item["label"]!, textAlign: TextAlign.center, fontSize: 1.5.sp, fontWeight: FontWeight.w600,maxLines: 2,),
               ],
             ),
           );

@@ -3,9 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
-import 'package:sizer/sizer.dart';
 
-import '../../modules/role/view/role_view.dart';
 import '../../routes/app_routes.dart';
 import '../constants/app_colors.dart';
 import '../helpers/auth_storage.dart';

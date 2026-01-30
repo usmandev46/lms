@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+
+import '../utils/app_size.dart';
 
 extension SizeWidgetExtension on num {
-  Widget get height => SizedBox(height: h);
+  double get h => AppSize.h(toDouble());
+  double get w => AppSize.w(toDouble());
 
+  Widget get height => SizedBox(height: h);
   Widget get width => SizedBox(width: w);
+}
+
+extension FontSizeExtension on num {
+  double get sp => AppSize.h(toDouble());
 }

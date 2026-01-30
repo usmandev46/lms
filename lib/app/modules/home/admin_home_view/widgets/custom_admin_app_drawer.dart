@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lms/app/core/constants/app_colors.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../../../core/custom_widgets/custom_dialog_logout.dart';
 import '../../../../core/custom_widgets/my_text.dart';
@@ -75,7 +74,7 @@ class CustomAdminAppDrawer extends StatelessWidget {
       },
     ],
 
-  "Analytics": [
+    "Analytics": [
       {"title": "Dashboard Stats", "icon": Icons.dashboard},
       {"title": "User Insights", "icon": Icons.insights},
     ],
@@ -103,7 +102,7 @@ class CustomAdminAppDrawer extends StatelessWidget {
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: 25.sp,
+                  radius: 5.sp,
                   backgroundImage: AssetImage(imagePath),
                 ),
                 3.width,
@@ -111,15 +110,8 @@ class CustomAdminAppDrawer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MyText(
-                      name,
-                      color: Colors.white, fontSize: 18,
-                    ),
-                    MyText(
-                      email,
-                        color: Colors.white70,
-                        fontSize: 14,
-                    ),
+                    MyText(name, color: Colors.white, fontSize: 2.sp),
+                    MyText(email, color: Colors.white70, fontSize: 1.8.sp),
                   ],
                 ),
               ],
@@ -179,7 +171,7 @@ class CustomAdminAppDrawer extends StatelessWidget {
                                         menu,
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 14.sp,
+                                          fontSize: 1.8.sp,
                                           color: Theme.of(
                                             context,
                                           ).colorScheme.primary,
@@ -192,7 +184,8 @@ class CustomAdminAppDrawer extends StatelessWidget {
                                     transitionBuilder: (child, anim) =>
                                         RotationTransition(
                                           turns:
-                                              child.key == const ValueKey('plus')
+                                              child.key ==
+                                                  const ValueKey('plus')
                                               ? Tween(
                                                   begin: 0.75,
                                                   end: 1.0,
@@ -292,7 +285,7 @@ class CustomAdminAppDrawer extends StatelessWidget {
         style: TextStyle(
           color: isLogout ? AppColors.error : Colors.black87,
           fontWeight: FontWeight.w500,
-          fontSize: 14.sp,
+          fontSize: 1.8.sp,
         ),
       ),
       onTap: onTap,

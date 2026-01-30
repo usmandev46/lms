@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import '../extensions/size_extensions.dart';
 import 'my_text.dart';
 
 class MyElevatedButton extends StatelessWidget {
   final String text;
+  final Widget? icons;
   final VoidCallback onPressed;
   final double? fontSize;
   final Color? backgroundColor;
@@ -14,6 +15,7 @@ class MyElevatedButton extends StatelessWidget {
   const MyElevatedButton({
     super.key,
     required this.text,
+    this.icons,
     required this.onPressed,
     this.fontSize,
     this.backgroundColor,
@@ -27,7 +29,8 @@ class MyElevatedButton extends StatelessWidget {
     return SizedBox(
       height: height ?? 7.h,
       width: double.infinity,
-      child: ElevatedButton(
+      child: ElevatedButton.icon(
+        icon: icons,
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.primary,
@@ -35,10 +38,10 @@ class MyElevatedButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(borderRadius ?? 12),
           ),
         ),
-        child: MyText(
+         label: MyText(
           text,
           color: textColor ?? Colors.white,
-          fontSize: fontSize ?? 15.sp,
+          fontSize: fontSize ?? 1.6.sp,
           fontWeight: FontWeight.bold,
         ),
       ),

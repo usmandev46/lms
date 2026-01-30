@@ -8,13 +8,12 @@ import 'package:lms/app/modules/home/widgets/recent_result_card.dart';
 import 'package:lms/app/modules/home/widgets/subjects_list.dart';
 import 'package:lms/app/modules/home/widgets/todays_classes.dart';
 import 'package:lms/app/modules/home/widgets/upcoming_events.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../../core/custom_widgets/my_text.dart';
 import '../../../core/theme/theme_controller.dart';
 
-class BetterHomeView extends StatelessWidget {
-  const BetterHomeView({super.key});
+class StudentHomeView extends StatelessWidget {
+  const StudentHomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +35,17 @@ class BetterHomeView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  profileBanner(themeController,context, name: '', email: '', phone: ''),
-                  2.height,
+                  profileBanner(
+                    themeController,
+                    context,
+                    name: 'Usman Ali',
+                    email: 'usmandev46@gmail.com',
+                    phone: '+92 341 7021654',
+                  ),
+                  3.height,
                   MyText(
                     "📚  Your Subjects",
-                    fontSize: 15.sp,
+                    fontSize: 2.sp,
                     fontWeight: FontWeight.bold,
                   ),
                   1.5.height,
@@ -52,27 +57,27 @@ class BetterHomeView extends StatelessWidget {
                     children: [
                       MyText(
                         "📊  Recent Results",
-                        fontSize: 15.sp,
+                        fontSize: 2.sp,
                         fontWeight: FontWeight.bold,
                       ),
                       TextButton(
                         onPressed: () {},
                         child: MyText(
                           "View All",
-                          color:  Theme.of(context).colorScheme.primary,
-                          fontSize: 14.sp,
+                          color: Theme.of(context).colorScheme.primary,
+                          fontSize: 1.5.sp,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                     ],
                   ),
-                  1.height,
+                  // 1.height,
                   recentResultsCard(themeController),
 
                   2.height,
                   MyText(
                     "🗓  Upcoming Tests / Events",
-                    fontSize: 15.sp,
+                    fontSize: 2.sp,
                     fontWeight: FontWeight.bold,
                   ),
                   1.5.height,
@@ -80,7 +85,7 @@ class BetterHomeView extends StatelessWidget {
                   2.height,
                   MyText(
                     "📅  Today’s Classes",
-                    fontSize: 15.sp,
+                    fontSize: 2.sp,
                     fontWeight: FontWeight.bold,
                   ),
                   2.height,

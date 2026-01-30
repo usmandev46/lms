@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/custom_widgets/my_text.dart';
+import '../../../../core/extensions/size_extensions.dart';
 import '../../../../core/theme/theme_controller.dart';
 
 class DashboardStatsSection extends StatelessWidget {
@@ -79,7 +79,7 @@ class _StatCard extends StatelessWidget {
             Theme.of(context).colorScheme.primary.withValues(alpha: 0.12),
             child: Icon(
               data["icon"],
-              size: 21.sp,
+              size: 3.2.sp,
               color: Theme.of(context).colorScheme.primary,
             ),
           ),
@@ -90,12 +90,12 @@ class _StatCard extends StatelessWidget {
               children: [
                 MyText(
                   data["value"],
-                  fontSize: 17.sp,
+                  fontSize: 2.1.sp,
                   fontWeight: FontWeight.bold,
                 ),
                 MyText(
                   data["label"],
-                  fontSize: 13.sp,
+                  fontSize: 1.6.sp,
                   color: Colors.grey,
                 ),
               ],

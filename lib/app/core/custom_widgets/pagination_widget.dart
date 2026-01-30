@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+
+import '../extensions/size_extensions.dart';
 
 class PaginationWidget extends StatelessWidget {
   final int currentPage;
@@ -86,7 +87,7 @@ class PaginationWidget extends StatelessWidget {
         child: Text(
           "$page",
           style: TextStyle(
-            fontSize: 12.2.sp,
+            fontSize: 1.4.sp,
             color: isActive ? Colors.white : Colors.black,
             fontWeight: FontWeight.w600,
           ),

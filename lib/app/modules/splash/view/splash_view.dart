@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
-import 'package:sizer/sizer.dart';
+
 import '../../../../gen/assets.gen.dart';
 import '../../../core/custom_widgets/my_text.dart';
 import '../controller/splash_controller.dart';
@@ -30,7 +30,7 @@ class SplashView extends StatelessWidget {
 
             MyText(
               "Smart LMS",
-              fontSize: 24.sp,
+              fontSize: 3.sp,
               fontWeight: FontWeight.bold,
               textAlign: TextAlign.center,
               color: Colors.white,
@@ -40,7 +40,7 @@ class SplashView extends StatelessWidget {
 
             MyText(
               "Learn. Teach. Grow.",
-              fontSize: 14.sp,
+              fontSize: 1.8.sp,
               fontWeight: FontWeight.w500,
               textAlign: TextAlign.center,
               color: Colors.white,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/custom_widgets/my_text.dart';
+import '../../../../core/extensions/size_extensions.dart';
 import '../../../../core/theme/theme_controller.dart';
 import '../controller/home_controller.dart';
 
@@ -40,11 +40,11 @@ class AccountsSummarySection extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              MyText(e["title"]!, fontSize: 14.sp),
+              MyText(e["title"]!, fontSize: 1.8.sp),
               MyText(
                 e["value"]!,
                 fontWeight: FontWeight.bold,
-                fontSize: 16.sp,
+                fontSize: 2.1.sp,
                 color: AppColors.accent,
               ),
             ],

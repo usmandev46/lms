@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:lms/app/core/constants/app_colors.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../routes/app_routes.dart';
+
 class ThemeService {
   static const _keyTheme = "isDarkMode";
   static const _keyRole = "role_save";
@@ -20,6 +22,25 @@ class ThemeService {
   Future<void> saveRole(String role) async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setString(_keyRole, role);
+  }
+
+  Future<String> getRole() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString(_keyRole) ?? '';
+  }
+
+  Future<void> redirectByRole() async {
+    final role = await getRole();
+
+    if (role == "admin") {
+      Get.offAllNamed(Routes.adminBottomBar);
+    } else if (role == "student") {
+      Get.offAllNamed(Routes.studentBottomBar);
+    } else if (role == "teacher") {
+      // Get.offAllNamed(Routes.teacherBottomBar);
+    } else {
+      Get.offAllNamed(Routes.login);
+    }
   }
 
   Future<void> applySavedTheme() async {
