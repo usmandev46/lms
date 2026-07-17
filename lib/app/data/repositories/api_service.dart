@@ -13,8 +13,8 @@ class ApiService {
   Completer<void>? _refreshCompleter;
 
   ApiService() {
-    _dio.options.connectTimeout = const Duration(seconds: 20);
-    _dio.options.receiveTimeout = const Duration(seconds: 20);
+    _dio.options.connectTimeout = const Duration(seconds: 30);
+    _dio.options.receiveTimeout = const Duration(seconds: 30);
 
     bool shouldRefreshToken(DioException e) {
       final statusCode = e.response?.statusCode;
@@ -101,7 +101,6 @@ class ApiService {
     );
   }
 
-  /// Generic POST request
   Future<Map<String, dynamic>?> post(
     String url, {
     Map<String, dynamic>? data,
@@ -119,7 +118,6 @@ class ApiService {
     );
   }
 
-  /// Generic PUT request
   Future<Map<String, dynamic>?> put(
     String url, {
     Map<String, dynamic>? data,
@@ -137,7 +135,6 @@ class ApiService {
     );
   }
 
-  /// Generic PATCH request
   Future<Map<String, dynamic>?> patch(
     String url, {
     Map<String, dynamic>? data,
@@ -155,7 +152,6 @@ class ApiService {
     );
   }
 
-  /// Generic DELETE request
   Future<Map<String, dynamic>?> delete(
     String url, {
     Map<String, dynamic>? data,
@@ -173,7 +169,6 @@ class ApiService {
     );
   }
 
-  /// Private request handler
   Future<Map<String, dynamic>?> _request(
       String url, {
         required String method,

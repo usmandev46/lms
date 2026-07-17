@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../../core/custom_widgets/CustomDataTable.dart';
 import '../../../core/custom_widgets/my_text.dart';
 import '../../../core/custom_widgets/pagination_widget.dart';
-import '../../home/widgets/custom_home_appBar.dart';
+import '../../studentModule/home/widgets/custom_home_appBar.dart';
 import '../controller/class_reports_controller.dart';
 import '../widget/class_reports_filter_dialogs.dart';
 

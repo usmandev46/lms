@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
-import 'package:lms/app/modules/home/widgets/custom_home_appBar.dart';
-import 'package:lms/app/modules/home/widgets/profile_banner.dart';
 import '../../../../../gen/assets.gen.dart';
 import '../../../../core/custom_widgets/my_text.dart';
 import '../../../../core/theme/theme_controller.dart';
+import '../../../studentModule/home/widgets/custom_home_appBar.dart';
+import '../../../studentModule/home/widgets/profile_banner.dart';
 import '../controller/home_controller.dart';
 import '../widgets/custom_admin_app_drawer.dart';
 

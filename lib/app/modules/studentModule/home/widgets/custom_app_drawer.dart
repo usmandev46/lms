@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lms/app/core/constants/app_colors.dart';
+
+import '../../../../core/helpers/auth_storage.dart';
+import '../../../../routes/app_routes.dart';
 
 class CustomAppDrawer extends StatelessWidget {
   final String name;
@@ -26,7 +30,9 @@ class CustomAppDrawer extends StatelessWidget {
       child: Column(
         children: [
           DrawerHeader(
-            decoration: BoxDecoration(color:  Theme.of(context).colorScheme.primary),
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.primary,
+            ),
             child: Row(
               children: [
                 CircleAvatar(
@@ -39,12 +45,17 @@ class CustomAppDrawer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(name,
-                        style: const TextStyle(
-                            color: Colors.white, fontSize: 18)),
-                    Text(email,
-                        style: const TextStyle(
-                            color: Colors.white70, fontSize: 14)),
+                    Text(
+                      name,
+                      style: const TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                    Text(
+                      email,
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 14,
+                      ),
+                    ),
                   ],
                 ),
               ],
@@ -58,12 +69,10 @@ class CustomAppDrawer extends StatelessWidget {
 
           const Spacer(),
 
-          _drawerTile(
-            Icons.logout,
-            "Logout",
-                () {},
-            isLogout: true,
-          ),
+          _drawerTile(Icons.logout, "Logout", () async {
+            await AuthStorage().removeToken();
+            Get.offAllNamed(Routes.role);
+          }, isLogout: true),
 
           const SizedBox(height: 20),
         ],
@@ -72,14 +81,13 @@ class CustomAppDrawer extends StatelessWidget {
   }
 
   Widget _drawerTile(
-      IconData icon,
-      String title,
-      VoidCallback onTap, {
-        bool isLogout = false,
-      }) {
+    IconData icon,
+    String title,
+    VoidCallback onTap, {
+    bool isLogout = false,
+  }) {
     return ListTile(
-      leading: Icon(icon,
-          color: isLogout ? Colors.red : Colors.black87),
+      leading: Icon(icon, color: isLogout ? Colors.red : Colors.black87),
       title: Text(
         title,
         style: TextStyle(

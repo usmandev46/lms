@@ -5,7 +5,7 @@ import 'package:lms/app/modules/student_tracking/controller/student_tracking_con
 import '../../../core/custom_widgets/CustomDataTable.dart';
 import '../../../core/custom_widgets/my_text.dart';
 import '../../../core/custom_widgets/pagination_widget.dart';
-import '../../home/widgets/custom_home_appBar.dart';
+import '../../studentModule/home/widgets/custom_home_appBar.dart';
 import '../widget/show_student_tracking_filters.dart';
 
 class StudentTrackingView extends StatelessWidget {

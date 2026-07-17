@@ -56,13 +56,13 @@ Widget _glassLogoutDialog(BuildContext context) {
             mainAxisSize: MainAxisSize.min,
             children: [
               CircleAvatar(
-                radius: 22.sp,
-                child: FittedBox(child:  Icon(Icons.logout_rounded, color: AppColors.error,size: 20.sp,)),),
+                radius: 2.5.sp,
+                child: FittedBox(child:  Icon(Icons.logout_rounded, color: AppColors.error,size: 2.2.sp,)),),
               1.2.height,
 
               MyText(
                 "Logout",
-                fontSize: 20.sp,
+                fontSize: 2.2.sp,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
                 decoration: TextDecoration.none,
@@ -75,7 +75,7 @@ Widget _glassLogoutDialog(BuildContext context) {
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 decoration: TextDecoration.none,
-                color: Colors.white70, fontSize: 15.sp,
+                color: Colors.white70, fontSize: 1.8.sp,
               ),
               2.height,
 

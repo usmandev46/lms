@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lms/app/core/custom_widgets/my_text.dart';
 
-import '../../../../gen/assets.gen.dart';
-import '../../../core/extensions/size_extensions.dart';
+import '../../../../../gen/assets.gen.dart';
+import '../../../../core/extensions/size_extensions.dart';
+
 
 PreferredSizeWidget customHomeAppBar(
   BuildContext context, {

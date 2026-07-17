@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lms/app/core/extensions/size_extensions.dart';
 
-import '../../../core/constants/app_colors.dart';
-import '../../../core/custom_widgets/my_text.dart';
-import '../../../core/theme/theme_controller.dart';
+import '../../../../core/constants/app_colors.dart';
+import '../../../../core/custom_widgets/my_text.dart';
+import '../../../../core/theme/theme_controller.dart';
+
 
 Widget todaysClasses(ThemeController theme) {
   final classesToday = [

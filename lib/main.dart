@@ -7,7 +7,6 @@ import 'app/core/helpers/romote_config_baseUrl_sevices.dart';
 import 'app/core/theme/dark_theme.dart';
 import 'app/core/theme/light_theme.dart';
 import 'app/core/theme/theme_controller.dart';
-import 'app/modules/home/view/home_view.dart';
 import 'app/routes/app_pages.dart';
 import 'app/routes/app_routes.dart';
 import 'firebase_options.dart';

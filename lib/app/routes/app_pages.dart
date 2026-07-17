@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
-import 'package:lms/app/modules/home/view/home_view.dart';
+import 'package:lms/app/modules/studentModule/bottombar/binding/bottom_nav_binding.dart';
+import 'package:lms/app/modules/studentModule/bottombar/view/student_bottombar.dart';
+import 'package:lms/app/modules/studentModule/home/binding/student_home_binding.dart';
 
 import '../modules/attendance_reports/binding/attendance_reports_binding.dart';
 import '../modules/attendance_reports/view/attendance_reports_view.dart';
@@ -125,10 +127,10 @@ class AppPages {
     /// -------------------------------- Student ----------------------
     GetPage(
       name: Routes.studentBottomBar,
-      page: () => StudentHomeView(),
+      page: () => StudentBottomBar(),
       bindings: [
-        BottomNavBinding(),
-        AdminHomeBinding(),
+        StudentBottomNavBinding(),
+        StudentHomeBinding(),
       ],
     ),
   ];

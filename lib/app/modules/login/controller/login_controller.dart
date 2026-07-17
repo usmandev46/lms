@@ -38,9 +38,6 @@ class LoginController extends GetxController {
 
       var res = await _api.post(_endpoints.login, data: body);
 
-      print("----------------- login res $res");
-      print("----------------- login status ${res?['success']}");
-
       if (res != null &&
           res['success'] == true &&
           res['data'] != null &&

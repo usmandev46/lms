@@ -5,7 +5,7 @@ import 'package:lms/app/modules/exam_reports/controller/exam_reports_controller.
 import '../../../core/custom_widgets/CustomDataTable.dart';
 import '../../../core/custom_widgets/my_text.dart';
 import '../../../core/custom_widgets/pagination_widget.dart';
-import '../../home/widgets/custom_home_appBar.dart';
+import '../../studentModule/home/widgets/custom_home_appBar.dart';
 import '../widget/showExamReportsFilterDialogs.dart';
 
 class ExamReportsView extends StatelessWidget {

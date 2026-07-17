@@ -130,11 +130,19 @@ class LoginView extends StatelessWidget {
                               : "Login",
                           onPressed: controller.isLoading.value
                               ? () {}
-                              : () {
-                            // ThemeService().redirectByRole();
-                                  // if (_formKey.currentState!.validate()) {
-                                  controller.login();
-                                  // }
+                              : () async {
+                                  // // ThemeService().redirectByRole();
+                                  //       // if (_formKey.currentState!.validate()) {
+                                  //       controller.login();
+                                  //       // }
+
+                                  final role = await ThemeService().getRole();
+
+                                  if (role == "admin") {
+                                    controller.login();
+                                  } else if (role == "student") {
+                                    ThemeService().redirectByRole();
+                                  }
                                 },
                         ),
                       ),

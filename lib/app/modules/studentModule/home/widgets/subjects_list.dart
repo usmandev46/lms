@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/custom_widgets/my_text.dart';
-import '../../../core/extensions/size_extensions.dart';
-import '../../../core/theme/theme_controller.dart';
+import '../../../../core/custom_widgets/my_text.dart';
+import '../../../../core/extensions/size_extensions.dart';
+import '../../../../core/theme/theme_controller.dart';
 
 Widget subjectsList(ThemeController theme) {
   final subjects = [
